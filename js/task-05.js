@@ -1,12 +1,12 @@
 const myInput = document.querySelector("#name-input");
 const mySpan = document.querySelector("#name-output");
 
-function newInput(element) {
-    mySpan.textContent = element.currentTarget.value;
+function newInput(event) {
+  mySpan.textContent = event.currentTarget.value;
 
-    if (element.currentTarget.value === "") {
-        mySpan.textContent = "Anonymous"
-    };
+  if (event.currentTarget.value === "") {
+    mySpan.textContent = "Anonymous";
+  }
 }
 
-myInput.addEventListener('input', newInput);
+myInput.addEventListener("input", newInput);
