@@ -13,21 +13,19 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector(".gallery");
+const galleryEl = document.querySelector(".gallery");
 
-console.log(gallery);
-
-const image = images
-  .map(function ({ url, alt }) {
-    return `<li><img src="${url}" alt="${alt}" width="320"></li>`;
+const galleryOfImages = images
+  .map(({ url, alt }) => {
+    return `<li><img src="${url}" alt="${alt}" width="400"></li>`;
   })
   .join("");
 
-console.log(image);
+console.log(galleryOfImages);
 
-gallery.insertAdjacentHTML("afterbegin", image);
+galleryEl.insertAdjacentHTML("afterbegin", galleryOfImages);
 
-gallery.style.cssText = `
+galleryEl.style.cssText = `
 display: flex;
 flex-direction: column;
 justify-content: center;
